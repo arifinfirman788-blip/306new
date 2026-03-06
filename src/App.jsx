@@ -238,7 +238,7 @@ const App = () => {
     { id: 'operation', label: '运营组织' },
     { id: 'enterprise', label: '企业端' },
     { id: 'gov', label: '政府端' },
-    { id: 'ip', label: 'IP生态' }
+    { id: 'ip', label: '筹备进展' }
   ];
 
   return (
