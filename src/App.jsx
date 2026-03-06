@@ -1459,7 +1459,7 @@ const App = () => {
             <div className="space-y-6 sticky top-32">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-black">视</div>
-                <h4 className="text-xl font-black text-slate-900">大会宣传视频</h4>
+                <h4 className="text-xl font-black text-slate-900">机器人训练视频</h4>
               </div>
               <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-black aspect-video relative group">
                 <video 
