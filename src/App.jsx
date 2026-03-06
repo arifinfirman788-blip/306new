@@ -39,7 +39,8 @@ import {
   Map,
   Camera,
   CalendarDays,
-  ExternalLink
+  ExternalLink,
+  ShieldCheck
 } from 'lucide-react';
 
 const Section = ({ id, title, subtitle, icon: Icon, children, delay = 0, gradient = "from-indigo-600 to-violet-600" }) => (
@@ -538,16 +539,25 @@ const App = () => {
             </div>
 
             {/* 下步规划 */}
-            <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-              <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <div className="bg-white p-8 rounded-[40px] border border-amber-200 shadow-xl ring-4 ring-amber-50 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-full blur-3xl -mr-10 -mt-10"></div>
+              <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-sm">
                 <Target size={28} />
               </div>
-              <h4 className="text-xl font-black text-slate-900 mb-4">下步规划</h4>
-              <p className="text-slate-600 font-bold text-sm mb-3">深度打通“黄小西”与“来黔啦”平台</p>
-              <ul className="space-y-3 text-slate-600 font-medium text-sm">
-                <li>• <span className="text-amber-600 font-bold">会员互通</span>：建立统一积分体系，提升粘性</li>
-                <li>• <span className="text-amber-600 font-bold">权益共享</span>：构建公益版与会员版联合运营</li>
-                <li>• <span className="text-amber-600 font-bold">双向引流</span>：实现“服务引流—商业转化”闭环</li>
+              <h4 className="text-xl font-black text-slate-900 mb-6 relative z-10 leading-tight">深度打通“黄小西”与“来黔啦”平台</h4>
+              <ul className="space-y-4 text-slate-600 font-medium text-sm relative z-10">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                  <span><span className="text-amber-600 font-black">会员互通</span>：建立统一积分体系，提升粘性</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                  <span><span className="text-amber-600 font-black">权益共享</span>：构建公益版与会员版联合运营</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                  <span><span className="text-amber-600 font-black">双向引流</span>：实现“服务引流—商业转化”闭环</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -780,38 +790,6 @@ const App = () => {
                        </div>
                      </div>
                      
-                     <div className="mt-12 p-8 bg-slate-900 rounded-3xl text-white">
-                       <h5 className="text-xl font-bold mb-6 flex items-center gap-2">
-                         <Lightbulb size={24} className="text-yellow-400" />
-                         核心洞察
-                       </h5>
-                       <div className="grid md:grid-cols-2 gap-8">
-                         <div>
-                           <p className="text-slate-400 text-sm font-bold uppercase tracking-wider mb-3">这背后体现的是</p>
-                           <ul className="space-y-3">
-                             <li className="flex items-center gap-3">
-                               <ArrowRight size={16} className="text-indigo-400" />
-                               <span>从 <span className="text-indigo-400 font-bold">按钮驱动</span> → <span className="text-indigo-400 font-bold">对话驱动</span></span>
-                             </li>
-                             <li className="flex items-center gap-3">
-                               <ArrowRight size={16} className="text-indigo-400" />
-                               <span>从 <span className="text-indigo-400 font-bold">客服逻辑</span> → <span className="text-indigo-400 font-bold">智能体逻辑</span></span>
-                             </li>
-                             <li className="flex items-center gap-3">
-                               <ArrowRight size={16} className="text-indigo-400" />
-                               <span>从 <span className="text-indigo-400 font-bold">被动展示</span> → <span className="text-indigo-400 font-bold">主动经营</span></span>
-                             </li>
-                           </ul>
-                         </div>
-                         <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8 flex items-center">
-                           <p className="text-lg font-medium leading-relaxed">
-                             这意味着产品具备：<br/>
-                             <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">持续跟随AI技术演进升级的能力</span>，<br/>
-                             而不是静态系统。
-                           </p>
-                         </div>
-                       </div>
-                     </div>
                   </div>
                 </div>
                 
@@ -826,6 +804,30 @@ const App = () => {
                      <Rocket size={32} className="text-indigo-400" />
                      2. 当前进展
                    </h4>
+
+                   {/* Key Focus - Guiju Code */}
+                   <div className="mb-12 bg-gradient-to-r from-orange-500/20 to-rose-500/20 border border-orange-500/30 rounded-3xl p-8 relative overflow-hidden group hover:border-orange-500/50 transition-colors">
+                     <div className="absolute -right-6 -top-6 text-orange-500/10 group-hover:text-orange-500/20 transition-colors duration-500 rotate-12">
+                       <ShieldCheck size={120} />
+                     </div>
+                     <div className="relative z-10">
+                       <div className="flex items-center gap-3 mb-6">
+                         <span className="bg-gradient-to-r from-orange-500 to-rose-500 text-white px-4 py-1.5 rounded-xl text-sm font-black uppercase tracking-widest shadow-lg shadow-orange-500/20">重点推进</span>
+                         <h5 className="text-2xl font-black text-orange-200">“黄小西 × 贵居码”深度融合</h5>
+                       </div>
+                       <div className="space-y-4">
+                         <p className="text-lg text-slate-100 leading-relaxed font-medium">
+                           与省公安厅的“贵居码”融合方案已完成，正在公安厅内部审批中。
+                         </p>
+                         <div className="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+                           <p className="text-orange-100/90 font-bold leading-relaxed">
+                             <span className="text-orange-400 mr-2">✦</span>
+                             打通后可实现帮助公安快速推进新兴住宿行业信息监管采集信息的动态采集，依托“黄小西*贵居码”，帮助快速推进酒店智能体的市场占有。
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
                    
                    <div className="grid md:grid-cols-2 gap-12">
                      {/* Doing */}
@@ -946,16 +948,6 @@ const App = () => {
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-sm font-bold border border-teal-100">
                       <span className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></span>
                       2.0 版本全新升级
-                    </div>
-                  </div>
-                  <div className="flex -space-x-3">
-                    {[1,2,3,4].map(i => (
-                      <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400 shadow-sm">
-                        <Users2 size={16} />
-                      </div>
-                    ))}
-                    <div className="w-10 h-10 rounded-full border-2 border-white bg-teal-500 text-white flex items-center justify-center text-xs font-bold shadow-sm z-10">
-                      +
                     </div>
                   </div>
                 </div>
@@ -1129,7 +1121,7 @@ const App = () => {
                         <p className="text-slate-600 text-sm leading-relaxed font-medium">
                           在延续本地美食推荐的基础上，新增订座、点餐、开票等便捷服务。
                           <span className="block mt-2 text-orange-600 font-bold bg-orange-50 p-2 rounded-lg border border-orange-100">
-                            核心升级：基于食客身体指标与当前餐厅菜品进行“精细化匹配”，精准推荐最适合他吃的菜，实现“美味+健康”的双重满足。
+                            努力完成：基于食客身体指标与当前餐厅菜品进行“精细化匹配”，精准推荐最适合他吃的菜，实现“美味+健康”的双重满足。
                           </span>
                         </p>
                       </div>
@@ -1225,9 +1217,17 @@ const App = () => {
           gradient="from-slate-600 to-slate-800"
         >
            <div className="bg-slate-900 text-white rounded-[48px] p-12 relative overflow-hidden">
+             {/* Progress Alert */}
+             <div className="absolute top-0 left-0 right-0 bg-indigo-600/90 backdrop-blur-md py-3 px-6 text-center z-20 border-b border-white/10">
+               <p className="text-sm font-bold flex items-center justify-center gap-2">
+                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                 当前进展：年前已提供省文旅厅信息中心试运行
+               </p>
+             </div>
+
              <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600 rounded-full blur-[100px] opacity-30 -mr-20 -mt-20"></div>
              
-             <div className="flex flex-col gap-12 relative z-10">
+             <div className="flex flex-col gap-12 relative z-10 mt-8">
                {/* 上方文字内容 */}
                <div className="w-full grid md:grid-cols-2 gap-8">
                  <div className="space-y-12">
@@ -1308,35 +1308,133 @@ const App = () => {
            </div>
         </Section>
 
-        {/* Section 7: IP与品牌生态 */}
+        {/* Section 7: 旅发大会筹备进展 */}
         <Section 
           id="ip" 
-          title="IP与品牌生态" 
-          subtitle="“黄小西家族”"
+          title="旅发大会筹备进展" 
+          subtitle="重点工作清单"
           icon={UserCircle} 
           gradient="from-pink-600 to-rose-600"
         >
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm text-center">
-              <div className="w-20 h-20 bg-pink-50 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users size={32} />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {/* Task 1 */}
+            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="font-black text-lg">1</span>
+                </div>
+                <h5 className="font-bold text-slate-900 leading-tight">“黄小西”机器人研发</h5>
               </div>
-              <h4 className="text-xl font-black text-slate-900 mb-2">IP形象体系</h4>
-              <p className="text-slate-600">融合贵州17个世居民族文化，构建“黄小西家族”。</p>
+              <div className="space-y-3">
+                <div className="p-3 bg-slate-50 rounded-xl">
+                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
+                  <p className="text-sm text-slate-700">头部/服装定制、对话知识库训练。</p>
+                </div>
+                <div className="p-3 bg-pink-50 rounded-xl">
+                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
+                  <p className="text-sm text-pink-700 font-medium">头部/服装/大模型调试下周三前完成。实体预估3月13日到位。</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm text-center">
-              <div className="w-20 h-20 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Cpu size={32} />
+
+            {/* Task 2 */}
+            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="font-black text-lg">2</span>
+                </div>
+                <h5 className="font-bold text-slate-900 leading-tight">机器人跳舞训练跟进</h5>
               </div>
-              <h4 className="text-xl font-black text-slate-900 mb-2">载体可落地</h4>
-              <p className="text-slate-600">智能芯片、全息屏等多形态载体应用。</p>
+              <div className="space-y-3">
+                <div className="p-3 bg-slate-50 rounded-xl">
+                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
+                  <p className="text-sm text-slate-700">《黄小西，吃晚饭》主题演艺环节展示。</p>
+                </div>
+                <div className="p-3 bg-pink-50 rounded-xl">
+                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
+                  <p className="text-sm text-pink-700 font-medium">正在训练与细节沟通中，预计2周完成进入彩排。</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm text-center">
-              <div className="w-20 h-20 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Video size={32} />
+
+            {/* Task 3 */}
+            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="font-black text-lg">3</span>
+                </div>
+                <h5 className="font-bold text-slate-900 leading-tight">“新十景”发布环节结合</h5>
               </div>
-              <h4 className="text-xl font-black text-slate-900 mb-2">品牌传播</h4>
-              <p className="text-slate-600">视频矩阵同步推进，打造文旅超级符号。</p>
+              <div className="space-y-3">
+                <div className="p-3 bg-slate-50 rounded-xl">
+                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
+                  <p className="text-sm text-slate-700">涉及黄小西数字人展现或机器人配合。</p>
+                </div>
+                <div className="p-3 bg-pink-50 rounded-xl">
+                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
+                  <p className="text-sm text-pink-700 font-medium">待贵阳市3月6日确认发布方案后对接。最晚11日前确认参与方式。</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Task 4 */}
+            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="font-black text-lg">4</span>
+                </div>
+                <h5 className="font-bold text-slate-900 leading-tight">机器人+智能体内容发布</h5>
+              </div>
+              <div className="space-y-3">
+                <div className="p-3 bg-slate-50 rounded-xl">
+                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
+                  <p className="text-sm text-slate-700">录入回复/路径/动作；制作配套视频。</p>
+                </div>
+                <div className="p-3 bg-pink-50 rounded-xl">
+                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
+                  <p className="text-sm text-pink-700 font-medium">初版对话稿已提供，待编导确认后开始训练和视频制作。</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Task 5 */}
+            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="font-black text-lg">5</span>
+                </div>
+                <h5 className="font-bold text-slate-900 leading-tight">会议小程序对接</h5>
+              </div>
+              <div className="space-y-3">
+                <div className="p-3 bg-slate-50 rounded-xl">
+                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
+                  <p className="text-sm text-slate-700">嵌入“黄小西”旅游服务智能体跳转。</p>
+                </div>
+                <div className="p-3 bg-emerald-50 rounded-xl">
+                  <p className="text-xs font-bold text-emerald-400 mb-1">进度</p>
+                  <p className="text-sm text-emerald-700 font-medium">目前已经完成技术对接。</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Task 6 */}
+            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="font-black text-lg">6</span>
+                </div>
+                <h5 className="font-bold text-slate-900 leading-tight">考察环节迎宾</h5>
+              </div>
+              <div className="space-y-3">
+                <div className="p-3 bg-slate-50 rounded-xl">
+                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
+                  <p className="text-sm text-slate-700">“黄小西”机器人在鼓楼大门迎宾。</p>
+                </div>
+                <div className="p-3 bg-pink-50 rounded-xl">
+                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
+                  <p className="text-sm text-pink-700 font-medium">计划机器人到位后确认站位动作。</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1346,12 +1444,12 @@ const App = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-black">图</div>
-                <h4 className="text-xl font-black text-slate-900">IP家族全景图</h4>
+                <h4 className="text-xl font-black text-slate-900">大会相关视觉</h4>
               </div>
               <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-white">
                 <img 
-                  src={import.meta.env.BASE_URL + "image/ip_family_optimized.jpg"} 
-                  alt="IP家族长图" 
+                  src={import.meta.env.BASE_URL + "image/旅发大会.png"} 
+                  alt="大会相关视觉" 
                   className="w-full h-auto block"
                 />
               </div>
@@ -1361,11 +1459,11 @@ const App = () => {
             <div className="space-y-6 sticky top-32">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-black">视</div>
-                <h4 className="text-xl font-black text-slate-900">品牌宣传视频</h4>
+                <h4 className="text-xl font-black text-slate-900">大会宣传视频</h4>
               </div>
               <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-black aspect-video relative group">
                 <video 
-                  src={import.meta.env.BASE_URL + "video/2_optimized.mp4"} 
+                  src={import.meta.env.BASE_URL + "video/e07db8bf0233352f0172d8db3ab5def2.mp4"} 
                   controls 
                   className="w-full h-full object-cover"
                   poster={import.meta.env.BASE_URL + "image/video-poster-placeholder.png"} // 可选：添加封面图
