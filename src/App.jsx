@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import AgentRouter from './components/AgentRouter';
 import hotelData from './data/hotel_data.json';
 import { 
   Target, 
@@ -604,25 +605,90 @@ const App = () => {
               </div>
             </SubSectionTitle>
             
-            {/* 关键数据 */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              <DataCard icon={Briefcase} value="200+" label="对接酒店" bgColor="bg-slate-50" color="text-slate-900" />
-              <DataCard icon={CheckCircle} value="105" label="陆续上线" bgColor="bg-emerald-50" color="text-emerald-600" />
-              <DataCard icon={Users} value="9886" label="注册用户" bgColor="bg-blue-50" color="text-blue-600" />
-              <DataCard icon={MessageSquare} value="1.9w+" label="AI问答" bgColor="bg-indigo-50" color="text-indigo-600" />
+            {/* 运营数据合作企业 */}
+            <div className="bg-white rounded-[40px] p-8 border border-slate-100 shadow-sm mb-12">
+              <h4 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                <Briefcase size={24} className="text-indigo-600" />
+                运营数据合作企业
+              </h4>
+              <div className="grid md:grid-cols-4 gap-6">
+                <div className="bg-indigo-50/50 p-6 rounded-3xl border border-indigo-100 text-center">
+                   <p className="text-slate-500 font-bold text-sm mb-2 uppercase tracking-wider">上线酒店</p>
+                   <p className="text-4xl font-black text-indigo-600">169<span className="text-lg ml-1 text-indigo-400">家</span></p>
+                </div>
+                <div className="bg-orange-50/50 p-6 rounded-3xl border border-orange-100 text-center">
+                   <p className="text-slate-500 font-bold text-sm mb-2 uppercase tracking-wider">签约待上线</p>
+                   <p className="text-4xl font-black text-orange-600">340<span className="text-lg ml-1 text-orange-400">家</span></p>
+                </div>
+                <div className="bg-emerald-50/50 p-6 rounded-3xl border border-emerald-100 text-center">
+                   <p className="text-slate-500 font-bold text-sm mb-2 uppercase tracking-wider">环比增长</p>
+                   <p className="text-4xl font-black text-emerald-600">201.18<span className="text-lg ml-1 text-emerald-400">%</span></p>
+                </div>
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex flex-col justify-center">
+                   <p className="text-slate-500 font-bold text-sm mb-2 uppercase tracking-wider">省外推广即将启动</p>
+                   <div className="flex flex-wrap gap-2 justify-center">
+                     {['四川省', '云南省', '河南开封'].map(city => (
+                       <span key={city} className="bg-white px-2 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm border border-slate-200">{city}</span>
+                     ))}
+                   </div>
+                </div>
+              </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-4 mb-16">
-               <div className="bg-slate-50 p-6 rounded-2xl text-center">
-                 <p className="text-slate-500 font-bold text-sm mb-1">累计完成服务工单</p>
-                 <p className="text-2xl font-black text-slate-900">675条</p>
+
+            {/* 经营数据 */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-16">
+               {/* 整体情况 */}
+               <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm">
+                  <h4 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                    <BarChart3 size={24} className="text-violet-600" />
+                    经营数据 - 整体情况
+                  </h4>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center p-5 bg-violet-50/50 rounded-2xl border border-violet-100">
+                      <span className="font-bold text-slate-600">累计AI问答数</span>
+                      <span className="text-3xl font-black text-violet-600">36,610<span className="text-sm text-violet-400 ml-1">条</span></span>
+                    </div>
+                    <div className="flex justify-between items-center p-5 bg-violet-50/50 rounded-2xl border border-violet-100">
+                      <span className="font-bold text-slate-600">累计访问量</span>
+                      <span className="text-3xl font-black text-violet-600">20,985<span className="text-sm text-violet-400 ml-1">人次</span></span>
+                    </div>
+                  </div>
                </div>
-               <div className="bg-slate-50 p-6 rounded-2xl text-center">
-                 <p className="text-slate-500 font-bold text-sm mb-1">满房情况下，日活</p>
-                 <p className="text-2xl font-black text-slate-900">超20%</p>
-               </div>
-               <div className="bg-slate-50 p-6 rounded-2xl text-center">
-                 <p className="text-slate-500 font-bold text-sm mb-1">服务响应效率提升</p>
-                 <p className="text-2xl font-black text-emerald-600">60%以上</p>
+
+               {/* 贵州饭店·贵宾楼 */}
+               <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm">
+                  <h4 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                    <Target size={24} className="text-rose-600" />
+                    重点案例：贵州饭店·贵宾楼
+                  </h4>
+                  <div className="space-y-4">
+                    <div className="p-5 bg-rose-50/50 rounded-2xl border border-rose-100">
+                      <div className="text-xs font-black text-rose-400 uppercase tracking-widest mb-2">两会期间</div>
+                      <div className="flex gap-8">
+                         <div>
+                           <div className="text-2xl font-black text-slate-900">342<span className="text-xs text-slate-400 ml-1">条</span></div>
+                           <div className="text-xs font-bold text-slate-500">累计AI问答</div>
+                         </div>
+                         <div>
+                           <div className="text-2xl font-black text-slate-900">190<span className="text-xs text-slate-400 ml-1">人次</span></div>
+                           <div className="text-xs font-bold text-slate-500">累计访问量</div>
+                         </div>
+                      </div>
+                    </div>
+                    <div className="p-5 bg-rose-50/50 rounded-2xl border border-rose-100">
+                      <div className="text-xs font-black text-rose-400 uppercase tracking-widest mb-2">上周末 (2.28-3.01)</div>
+                      <div className="flex gap-8">
+                         <div>
+                           <div className="text-2xl font-black text-slate-900">74<span className="text-xs text-slate-400 ml-1">条</span></div>
+                           <div className="text-xs font-bold text-slate-500">累计AI问答</div>
+                         </div>
+                         <div>
+                           <div className="text-2xl font-black text-slate-900">70<span className="text-xs text-slate-400 ml-1">人次</span></div>
+                           <div className="text-xs font-bold text-slate-500">累计访问量</div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
                </div>
             </div>
 
@@ -1164,6 +1230,9 @@ const App = () => {
           </div>
         </div>
       )}
+      
+      {/* Intelligent Agent Router */}
+      <AgentRouter />
     </div>
   );
 };
