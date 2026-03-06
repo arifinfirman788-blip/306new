@@ -245,7 +245,7 @@ const AgentRouter = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="p-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl shadow-indigo-300 flex items-center justify-center transition-colors border-4 border-white/20 backdrop-blur-sm"
+        className="hidden p-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-2xl shadow-indigo-300 flex items-center justify-center transition-colors border-4 border-white/20 backdrop-blur-sm"
       >
         {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
       </motion.button>
