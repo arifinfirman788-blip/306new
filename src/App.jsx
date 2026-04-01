@@ -478,7 +478,7 @@ const App = () => {
               <div className="relative mx-auto w-[400px] h-[800px] rounded-[40px] overflow-hidden shadow-xl border border-slate-200 bg-white group">
                 <div className="w-[400px] h-[824px] absolute -top-6 left-0 origin-top-left scale-100">
                   <iframe 
-                    src="https://arifinfirman788-blip.github.io/HuangxiaoxiV4.0" 
+                    src="https://arifinfirman788-blip.github.io/HuangxiaoxiV4.0/" 
                     className="w-full h-full border-0"
                     title="新版首页舞台"
                     scrolling="no"
