@@ -378,46 +378,46 @@ const App = () => {
             <div className="lg:col-span-7 space-y-12">
               
               {/* 核心亮点浓缩 */}
-              <div className="bg-white rounded-[48px] p-10 border border-slate-100 shadow-sm">
-                <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 mb-1">
-                      <div className="w-10 h-10 bg-violet-50 text-violet-600 rounded-xl flex items-center justify-center shrink-0">
-                        <PlayCircle size={20} />
+              <div className="bg-white rounded-[48px] p-10 lg:p-16 border border-slate-100 shadow-sm lg:h-[800px] flex flex-col justify-center">
+                <div className="flex flex-col gap-y-16">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="w-12 h-12 bg-violet-50 text-violet-600 rounded-xl flex items-center justify-center shrink-0">
+                        <PlayCircle size={24} />
                       </div>
-                      <h5 className="text-lg font-black text-slate-900">新首页 = 超级门户</h5>
+                      <h5 className="text-xl font-black text-slate-900">新首页 = 超级门户</h5>
                     </div>
-                    <p className="text-slate-500 font-medium text-sm pl-[52px]">用智能体替代传统功能入口</p>
+                    <p className="text-slate-500 font-medium text-base pl-[64px]">用智能体替代传统功能入口</p>
                   </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 mb-1">
-                      <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0">
-                        <Layers size={20} />
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0">
+                        <Layers size={24} />
                       </div>
-                      <h5 className="text-lg font-black text-slate-900">多智能体协同</h5>
+                      <h5 className="text-xl font-black text-slate-900">多智能体协同</h5>
                     </div>
-                    <p className="text-slate-500 font-medium text-sm pl-[52px]">不再是“一个机器人回答所有问题”</p>
+                    <p className="text-slate-500 font-medium text-base pl-[64px]">不再是“一个机器人回答所有问题”</p>
                   </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 mb-1">
-                      <div className="w-10 h-10 bg-fuchsia-50 text-fuchsia-600 rounded-xl flex items-center justify-center shrink-0">
-                        <UserCircle size={20} />
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="w-12 h-12 bg-fuchsia-50 text-fuchsia-600 rounded-xl flex items-center justify-center shrink-0">
+                        <UserCircle size={24} />
                       </div>
-                      <h5 className="text-lg font-black text-slate-900">个人专属智能体</h5>
+                      <h5 className="text-xl font-black text-slate-900">个人专属智能体</h5>
                     </div>
-                    <p className="text-slate-500 font-medium text-sm pl-[52px]">“人人可参与”的服务生态</p>
+                    <p className="text-slate-500 font-medium text-base pl-[64px]">“人人可参与”的服务生态</p>
                   </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 mb-1">
-                      <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center shrink-0">
-                        <Compass size={20} />
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center shrink-0">
+                        <Compass size={24} />
                       </div>
-                      <h5 className="text-lg font-black text-slate-900">主动预判需求</h5>
+                      <h5 className="text-xl font-black text-slate-900">主动预判需求</h5>
                     </div>
-                    <p className="text-slate-500 font-medium text-sm pl-[52px]">从“响应”转向“预判”</p>
+                    <p className="text-slate-500 font-medium text-base pl-[64px]">从“响应”转向“预判”</p>
                   </div>
                 </div>
               </div>
