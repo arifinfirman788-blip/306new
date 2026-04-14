@@ -851,7 +851,7 @@ const App = () => {
                   </div>
                 </div>
 
-                <div className="grid lg:grid-cols-3 gap-8 mb-12">
+                <div className="grid lg:grid-cols-2 gap-8 mb-12">
                   {/* 1. 简介模块 */}
                   <div className="space-y-6">
                     <div className="bg-teal-50/50 rounded-3xl p-6 border border-teal-100 h-full">
@@ -897,51 +897,7 @@ const App = () => {
                     </div>
                   </div>
 
-                  {/* 2. 进展情况 */}
-                  <div className="space-y-6">
-                    <h5 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                      <Rocket size={24} className="text-slate-900" />
-                      当前进展情况
-                    </h5>
-
-                    {/* 开发进展已被移除 */}
-
-                    {/* 对接进展 */}
-                    <div className="bg-slate-50 rounded-3xl p-6 border border-slate-100">
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
-                        <h6 className="font-bold text-slate-700">对接进展</h6>
-                      </div>
-                      <ul className="space-y-3">
-                        <li className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                          <div className="flex items-center justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                              <div className="w-6 h-6 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0">
-                                <span className="text-xs font-bold">✓</span>
-                              </div>
-                              <span className="text-slate-700 font-medium text-sm">多彩贵州城导览已完成</span>
-                            </div>
-                            <a 
-                              href="https://vr.gzmydf.com/pano/view/project?id=2018618714008924162" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-1 text-xs font-bold text-indigo-600 hover:text-indigo-700 bg-indigo-50 px-3 py-1.5 rounded-lg hover:bg-indigo-100 transition-colors"
-                            >
-                              查看详情 <ExternalLink size={12} />
-                            </a>
-                          </div>
-                        </li>
-                        <li className="flex items-center gap-3 p-2">
-                          <div className="w-1.5 h-1.5 bg-orange-400 rounded-full shrink-0 ml-2" />
-                          <span className="text-slate-600 text-sm">多彩贵州城的数据接口对接中</span>
-                        </li>
-                        <li className="flex items-center gap-3 p-2">
-                          <div className="w-1.5 h-1.5 bg-slate-400 rounded-full shrink-0 ml-2" />
-                          <span className="text-slate-500 text-sm">与风景公司票务系统供应商对接中（等待接口）</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  {/* 2. 进展情况已被移除 */}
 
                   {/* 3. 展示图区域 */}
                   <div className="space-y-6 flex flex-col h-full">
