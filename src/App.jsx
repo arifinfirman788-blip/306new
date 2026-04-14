@@ -299,27 +299,7 @@ const App = () => {
                 </div>
               </h1>
 
-              {/* 3点汇报重点 */}
-              <div className="flex flex-col md:flex-row gap-4 mt-8">
-                <div className="bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl px-6 py-4 shadow-sm flex items-center gap-3">
-                  <div className="w-8 h-8 bg-red-50 text-red-600 rounded-lg flex items-center justify-center shrink-0">
-                    <Target size={18} />
-                  </div>
-                  <span className="font-bold text-slate-800 text-sm">全力以赴面对AI应用决战之年</span>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl px-6 py-4 shadow-sm flex items-center gap-3">
-                  <div className="w-8 h-8 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0">
-                    <Users size={18} />
-                  </div>
-                  <span className="font-bold text-slate-800 text-sm">用户规模正以十倍速度增长</span>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl px-6 py-4 shadow-sm flex items-center gap-3">
-                  <div className="w-8 h-8 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center shrink-0">
-                    <Briefcase size={18} />
-                  </div>
-                  <span className="font-bold text-slate-800 text-sm">企业级智能体全面开花</span>
-                </div>
-              </div>
+              {/* 3点汇报重点已被移除 */}
             </motion.div>
         </section>
 
@@ -442,34 +422,7 @@ const App = () => {
                 </div>
               </div>
 
-              {/* 当前进展 */}
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[40px] p-8 text-white shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
-                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                  <div className="flex items-center gap-5">
-                    <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-violet-300 border border-white/10">
-                      <Rocket size={32} />
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-black mb-1">当前进展</h4>
-                      <p className="text-slate-400 font-medium text-sm">Project Progress</p>
-                    </div>
-                  </div>
-                  <div className="flex-1 w-full md:w-auto bg-white/5 rounded-2xl p-5 border border-white/5 flex flex-col gap-3">
-                    <div className="flex justify-between items-center border-b border-white/10 pb-3">
-                      <span className="font-bold text-violet-300">本周目标</span>
-                      <span className="font-black bg-violet-500 text-white px-2 py-0.5 rounded text-xs">Doing</span>
-                    </div>
-                    <p className="font-medium text-sm text-slate-300">完成核心功能模块开发</p>
-                    
-                    <div className="flex justify-between items-center border-b border-white/10 pb-3 mt-2">
-                      <span className="font-bold text-emerald-300">3月14日</span>
-                      <span className="font-black bg-emerald-500 text-white px-2 py-0.5 rounded text-xs">Milestone</span>
-                    </div>
-                    <p className="font-medium text-sm text-slate-300">完成所有模块功能及数据联调并发布初版</p>
-                  </div>
-                </div>
-              </div>
+              {/* 当前进展已被移除 */}
 
             </div>
 
@@ -829,40 +782,7 @@ const App = () => {
                      </div>
                    </div>
                    
-                   <div className="grid md:grid-cols-2 gap-12">
-                     {/* Doing */}
-                     <div className="space-y-6">
-                       <div className="flex items-center gap-3">
-                         <span className="bg-indigo-500 text-white px-3 py-1 rounded-lg text-xs font-black uppercase tracking-widest">Doing</span>
-                         <h5 className="text-xl font-bold text-indigo-200">本周重点</h5>
-                       </div>
-                       <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-colors">
-                         <ul className="space-y-4">
-                           <li className="flex items-start gap-3">
-                             <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5 shrink-0" />
-                             <span className="text-lg text-slate-200">完成核心功能模块开发</span>
-                           </li>
-                           <li className="flex items-start gap-3">
-                             <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5 shrink-0" />
-                             <span className="text-lg text-slate-200">优化首页 4.0 交互细节</span>
-                           </li>
-                         </ul>
-                       </div>
-                     </div>
-
-                     {/* Milestone */}
-                     <div className="space-y-6">
-                       <div className="flex items-center gap-3">
-                         <span className="bg-emerald-500 text-white px-3 py-1 rounded-lg text-xs font-black uppercase tracking-widest">Milestone</span>
-                         <h5 className="text-xl font-bold text-emerald-200">3月14日目标</h5>
-                       </div>
-                       <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-colors">
-                         <p className="text-xl font-bold text-white leading-relaxed">
-                           完成所有模块功能及数据联调，并<span className="text-emerald-400">发布初版</span>。
-                         </p>
-                       </div>
-                     </div>
-                   </div>
+                   {/* Doing/Milestone已被移除 */}
                 </div>
               </div>
 
@@ -909,28 +829,7 @@ const App = () => {
                   </div>
                 </div>
 
-                {/* 3月份任务目标 */}
-                <div className="relative overflow-hidden bg-gradient-to-r from-rose-500 to-orange-500 rounded-[32px] p-8 text-white shadow-lg group hover:shadow-2xl transition-all duration-500">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
-                  <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div className="flex items-center gap-6">
-                      <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30">
-                        <Target size={32} className="text-white" />
-                      </div>
-                      <div>
-                        <div className="text-rose-100 font-bold uppercase tracking-widest text-sm mb-1">March Target</div>
-                        <h3 className="text-3xl font-black">3月份任务目标</h3>
-                      </div>
-                    </div>
-                    <div className="flex-1 w-full md:w-auto bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 text-center md:text-left">
-                      <div className="flex items-baseline justify-center md:justify-start gap-2">
-                        <span className="text-lg font-medium text-rose-100">完成</span>
-                        <span className="text-4xl md:text-5xl font-black text-white drop-shadow-sm">2000</span>
-                        <span className="text-lg font-medium text-rose-100">家酒店上线</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* 3月份任务目标已被移除 */}
               </div>
             </div>
           </div>
@@ -1005,30 +904,7 @@ const App = () => {
                       当前进展情况
                     </h5>
 
-                    {/* 开发进展 */}
-                    <div className="bg-slate-50 rounded-3xl p-6 border border-slate-100">
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
-                        <h6 className="font-bold text-slate-700">开发进展</h6>
-                      </div>
-                      <div className="relative pl-4 space-y-6 border-l-2 border-slate-200 ml-2">
-                        <div className="relative">
-                          <div className="absolute -left-[21px] top-1.5 w-3 h-3 bg-white border-2 border-slate-300 rounded-full"></div>
-                          <div className="text-sm font-bold text-slate-400 mb-1">03月11日</div>
-                          <p className="text-slate-700 font-medium">预计完成景区智能体整体联调</p>
-                        </div>
-                        <div className="relative">
-                          <div className="absolute -left-[21px] top-1.5 w-3 h-3 bg-white border-2 border-slate-300 rounded-full"></div>
-                          <div className="text-sm font-bold text-slate-400 mb-1">03月13日</div>
-                          <p className="text-slate-700 font-medium">完成与黄小西旅游服务智能体的集成测试</p>
-                        </div>
-                        <div className="relative">
-                          <div className="absolute -left-[21px] top-1.5 w-3 h-3 bg-indigo-500 border-2 border-white shadow-sm rounded-full"></div>
-                          <div className="text-sm font-bold text-indigo-600 mb-1">03月20日</div>
-                          <p className="text-slate-900 font-bold">预计达到上线测试条件</p>
-                        </div>
-                      </div>
-                    </div>
+                    {/* 开发进展已被移除 */}
 
                     {/* 对接进展 */}
                     <div className="bg-slate-50 rounded-3xl p-6 border border-slate-100">
@@ -1126,21 +1002,7 @@ const App = () => {
                         </p>
                       </div>
                       
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-xs font-bold">进展情况</span>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-2 text-sm">
-                            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0" />
-                            <span className="text-slate-600">目前1.0版本测试版本已上线</span>
-                          </div>
-                          <div className="flex items-start gap-2 text-sm">
-                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 shrink-0" />
-                            <span className="text-slate-600">计划3月15旅发大会版本上线测试</span>
-                          </div>
-                        </div>
-                      </div>
+                      {/* 进展情况已被移除 */}
                     </div>
 
                     <div className="flex justify-center xl:justify-end shrink-0">
@@ -1175,21 +1037,7 @@ const App = () => {
                         </p>
                       </div>
                       
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-xs font-bold">进展情况</span>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-2 text-sm">
-                            <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-1.5 shrink-0" />
-                            <span className="text-slate-600">预计3月11日完成与黄小西的对接联调</span>
-                          </div>
-                          <div className="flex items-start gap-2 text-sm">
-                            <div className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 shrink-0" />
-                            <span className="text-slate-600">3月15上线测试</span>
-                          </div>
-                        </div>
-                      </div>
+                      {/* 进展情况已被移除 */}
                     </div>
 
                     <div className="flex justify-center xl:justify-end shrink-0">
@@ -1217,13 +1065,7 @@ const App = () => {
           gradient="from-slate-600 to-slate-800"
         >
            <div className="bg-slate-900 text-white rounded-[48px] p-12 relative overflow-hidden">
-             {/* Progress Alert */}
-             <div className="absolute top-0 left-0 right-0 bg-indigo-600/90 backdrop-blur-md py-3 px-6 text-center z-20 border-b border-white/10">
-               <p className="text-sm font-bold flex items-center justify-center gap-2">
-                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                 当前进展：年前已提供省文旅厅信息中心试运行
-               </p>
-             </div>
+             {/* Progress Alert 已被移除 */}
 
              <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600 rounded-full blur-[100px] opacity-30 -mr-20 -mt-20"></div>
              
@@ -1308,172 +1150,7 @@ const App = () => {
            </div>
         </Section>
 
-        {/* Section 7: 旅发大会筹备进展 */}
-        <Section 
-          id="ip" 
-          title="旅发大会筹备进展" 
-          subtitle="重点工作清单"
-          icon={UserCircle} 
-          gradient="from-pink-600 to-rose-600"
-        >
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {/* Task 1 */}
-            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="font-black text-lg">1</span>
-                </div>
-                <h5 className="font-bold text-slate-900 leading-tight">“黄小西”机器人研发</h5>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-slate-50 rounded-xl">
-                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
-                  <p className="text-sm text-slate-700">头部/服装定制、对话知识库训练。</p>
-                </div>
-                <div className="p-3 bg-pink-50 rounded-xl">
-                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
-                  <p className="text-sm text-pink-700 font-medium">头部/服装/大模型调试下周三前完成。实体预估3月13日到位。</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Task 2 */}
-            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="font-black text-lg">2</span>
-                </div>
-                <h5 className="font-bold text-slate-900 leading-tight">机器人跳舞训练跟进</h5>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-slate-50 rounded-xl">
-                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
-                  <p className="text-sm text-slate-700">《黄小西，吃晚饭》主题演艺环节展示。</p>
-                </div>
-                <div className="p-3 bg-pink-50 rounded-xl">
-                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
-                  <p className="text-sm text-pink-700 font-medium">正在训练与细节沟通中，预计2周完成进入彩排。</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Task 3 */}
-            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="font-black text-lg">3</span>
-                </div>
-                <h5 className="font-bold text-slate-900 leading-tight">“新十景”发布环节结合</h5>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-slate-50 rounded-xl">
-                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
-                  <p className="text-sm text-slate-700">涉及黄小西数字人展现或机器人配合。</p>
-                </div>
-                <div className="p-3 bg-pink-50 rounded-xl">
-                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
-                  <p className="text-sm text-pink-700 font-medium">待贵阳市3月6日确认发布方案后对接。最晚11日前确认参与方式。</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Task 4 */}
-            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="font-black text-lg">4</span>
-                </div>
-                <h5 className="font-bold text-slate-900 leading-tight">机器人+智能体内容发布</h5>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-slate-50 rounded-xl">
-                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
-                  <p className="text-sm text-slate-700">录入回复/路径/动作；制作配套视频。</p>
-                </div>
-                <div className="p-3 bg-pink-50 rounded-xl">
-                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
-                  <p className="text-sm text-pink-700 font-medium">初版对话稿已提供，待编导确认后开始训练和视频制作。</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Task 5 */}
-            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="font-black text-lg">5</span>
-                </div>
-                <h5 className="font-bold text-slate-900 leading-tight">会议小程序对接</h5>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-slate-50 rounded-xl">
-                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
-                  <p className="text-sm text-slate-700">嵌入“黄小西”旅游服务智能体跳转。</p>
-                </div>
-                <div className="p-3 bg-emerald-50 rounded-xl">
-                  <p className="text-xs font-bold text-emerald-400 mb-1">进度</p>
-                  <p className="text-sm text-emerald-700 font-medium">目前已经完成技术对接。</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Task 6 */}
-            <div className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="font-black text-lg">6</span>
-                </div>
-                <h5 className="font-bold text-slate-900 leading-tight">考察环节迎宾</h5>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-slate-50 rounded-xl">
-                  <p className="text-xs font-bold text-slate-400 mb-1">内容</p>
-                  <p className="text-sm text-slate-700">“黄小西”机器人在鼓楼大门迎宾。</p>
-                </div>
-                <div className="p-3 bg-pink-50 rounded-xl">
-                  <p className="text-xs font-bold text-pink-400 mb-1">进度</p>
-                  <p className="text-sm text-pink-700 font-medium">计划机器人到位后确认站位动作。</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 长图与视频展示 */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* 左侧：长图展示 */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-black">图</div>
-                <h4 className="text-xl font-black text-slate-900">大会相关视觉</h4>
-              </div>
-              <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-white">
-                <img 
-                  src={import.meta.env.BASE_URL + "image/旅发大会.png"} 
-                  alt="大会相关视觉" 
-                  className="w-full h-auto block"
-                />
-              </div>
-            </div>
-
-            {/* 右侧：视频展示 */}
-            <div className="space-y-6 sticky top-32">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-black">视</div>
-                <h4 className="text-xl font-black text-slate-900">机器人训练视频</h4>
-              </div>
-              <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-black aspect-video relative group">
-                <video 
-                  src={import.meta.env.BASE_URL + "video/e07db8bf0233352f0172d8db3ab5def2.mp4"} 
-                  controls 
-                  className="w-full h-full object-cover"
-                  poster={import.meta.env.BASE_URL + "image/video-poster-placeholder.png"} // 可选：添加封面图
-                >
-                  您的浏览器不支持视频播放。
-                </video>
-              </div>
-            </div>
-          </div>
-        </Section>
+        {/* Section 7: 旅发大会筹备进展已被移除 */}
 
       </main>
 
